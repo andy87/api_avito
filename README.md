@@ -10,22 +10,23 @@ https://miro.com/app/board/uXjVKHFfUB0=/
  - Servcie: Фасад для класса API
 
 ### Использование Api
+Методы Api возвращают массив с данными.
 ```php
-use and_y87/api_avito/ApiAvito;
-use and_y87/api_avito/dto/AvitoApiRequisites;
-use and_y87/api_avito/tools/CacheProvider;
+use and_y87\api_avito\ApiAvito;
+use and_y87\api_avito\dto\AvitoApiRequisites;
+use and_y87\api_avito\cache\CacheProvider;
 
 // Add `CacheProvider`
 class RedisCacheProvider extends CacheProvider
 {
-    public function getValue(string $key )
+    public function getValue( string $key ): string
     {
-        Yii::$app->redis->get( $key );
+        return (string) Yii::$app->redis->get( $key );
     }
 
-    public function setValue( string $key, string $value )
+    public function setValue( string $key, mixed $value ): bool
     {
-        Yii::$app->redis->set( $key, value );
+        return Yii::$app->redis->set( $key, $value );
     }
 }
 
@@ -39,6 +40,20 @@ $avitoApiRequisites = new AvitoApiRequisites( $client_id, $client_secret );
 $apiAvito = ApiAvito( $avitoApiRequisites, $redisCacheProvider );
 
 // Use `Api`
+$me = $apiAvito->me(); // return array
+```
+### Использование Service
+Методы Service возвращают Объекты с данными.
+```
+use and_y87\api_avito\service\AvitoService;
+
+//Вводная часть при использовании сервиса аналогична Api
+
+// Create object `Service`
+$avitoService = new AvitoService($apiAvito);
+
+// Use `Service`
+$me = $avitoService->me(); // return and_y87\api_avito\response\Me();
 ```
 
 ### Исходная документация API `Avio`: 
