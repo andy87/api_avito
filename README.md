@@ -2,9 +2,6 @@
 
 PHP Фасад для API Avio (www.avito.ru)
 
-#### Схема работы API
-https://miro.com/app/board/uXjVKHFfUB0=/
-
 #### Реализация
  - API: реализация запросов к api сервису `Avito`
  - Servcie: Фасад для класса API
@@ -55,6 +52,8 @@ $avitoService = new AvitoService($apiAvito);
 // Use `Service`
 $me = $avitoService->me(); // return and_y87\api_avito\response\Me();
 ```
+#### Схема работы API
+![Схема работы API](https://static.andy87.ru/github/api/apiLogivSchema.png)
 
 ### Исходная документация API `Avio`: 
  - https://developers.avito.ru/about-api
