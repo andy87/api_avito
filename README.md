@@ -44,7 +44,7 @@ $me = $apiAvito->me(); // return array
 ```
 ### Использование Service
 Методы Service возвращают Объекты с данными.
-```
+```php
 use and_y87\api_avito\service\AvitoService;
 
 //Вводная часть при использовании сервиса аналогична Api
