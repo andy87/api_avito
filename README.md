@@ -6,7 +6,7 @@ PHP Фасад для API Avio (www.avito.ru)
 https://miro.com/app/board/uXjVKHFfUB0=/
 
 #### Реализация
- - API: реализация запросов к api сервису `Head Hunter`
+ - API: реализация запросов к api сервису `Avito`
  - Servcie: Фасад для класса API
 
 ### Использование Api
