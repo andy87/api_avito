@@ -1,8 +1,8 @@
 # api avito
 
-## IN PROGRESS
-
 PHP Фасад для API Avio (www.avito.ru)
+
+![IN PROGRESS](http://www.bc-energy.it/wp-content/uploads/2013/08/work-in-progress.png)
 
 #### Реализация
  - API: реализация запросов к api сервису `Avito`
