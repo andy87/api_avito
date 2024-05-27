@@ -1,4 +1,4 @@
-# api avito
+# providerAvito
 
 PHP Фасад для API Avio (www.avito.ru)
 
