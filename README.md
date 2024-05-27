@@ -19,9 +19,9 @@ PHP Фасад для API Avio (www.avito.ru)
 ### Использование Api
 Методы Api возвращают массив с данными.
 ```php
-use and_y87\api_avito\ApiAvito;
-use and_y87\api_avito\dto\AvitoApiRequisites;
-use and_y87\api_avito\cache\CacheProvider;
+use and_y87\provider_avito\ApiAvito;
+use and_y87\provider_avito\dto\AvitoApiRequisites;
+use and_y87\provider_avito\cache\CacheProvider;
 
 // Создание класса `CacheProvider`
 class RedisCacheProvider extends CacheProvider
@@ -54,7 +54,7 @@ echo $me['name']; // получение значения массива по к�
 ### Использование Service
 Методы Service возвращают объекты(экзмпляры классов) содержащие актуальные для endpoint свойства, согласно документации сервиса.
 ```php
-use and_y87\api_avito\service\AvitoService;
+use and_y87\provider_avito\service\AvitoService;
 
 //Вводная часть при использовании сервиса аналогична Api
 
